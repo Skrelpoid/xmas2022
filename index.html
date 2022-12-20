@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>XMas</title>
+    <style media="screen">
+      #circle1 {
+        position: absolute;
+        left: -530px;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit a</p>
+    <img id="circle1" src="circle.png" alt="Die erste Scheibe" onclick="rotateCircle1()">
+    <ul>
+	<li>Däumelieschen</li>
+	<li>Die Störche</li>
+	<li>Der fliegende Koffer</li>
+	<li>Fliedermütterchen </li>
+	<li>Der Tannenbaum</li>
+</ul>
+<p>Dort auf dem Platze banden mitunter die kecksten Knaben ihre Schlitten an die Bauernwagen und fuhren dann eine tüchtige Strecke mit. Das ging gerade recht lustig. Als das Spiel im vollen Gange war, kam ein großer, weiß angestrichener Schlitten. Eine Person saß in demselben, die in einen weißen, rauen Pelz eingehüllt und mit einer weißen Pelzmütze bedeckt war. Der Schlitten fuhr zweimal um den Platz herum und Kay gelang es, seinen kleinen Schlitten an denselben festzubinden und nun fuhr er mit. Rascher und immer rascher ging es gerade in die nächste Straße hinein. Der Führer des Schlittens wandte den Kopf und nickte ihm so freundlich zu, als ob sie mit einander bekannt wären. So oft Kay seinen kleinen Schlitten abbinden wollte, nickte die Person abermals und dann blieb Kay sitzen; sie fuhren gerade zum Stadttore hinaus. Da wurde das Schneegestöber so heftig, dass der kleine Knabe nicht die Hand vor den Augen mehr erkennen konnte, während er gleichwohl weiter fuhr. Endlich ließ er den Strick fallen, um sich von dem großen Schlitten los zu machen, aber es half nichts, sein kleines Fuhrwerk hing fest und es ging mit Windeseile. Da rief er ganz laut, aber niemand hörte ihn, und der Schnee wirbelte und der Schlitten flog vorwärts. Mitunter gab es einen Stoß, als ob man über Gräben und Hecken führe. Er war ganz entsetzt, wollte sein Vaterunser beten, konnte sich aber nur noch auf das große Einmaleins besinnen.</p>
+<script type="text/javascript">
+  var circle1Rotation = 0;
+  function rotateCircle1() {
+    circle1Rotation = (circle1Rotation + 30) % 360
+    document.getElementById('circle1').style = "transform: rotate(" + circle1Rotation + "deg)";
+  }
+</script>
+  </body>
+</html>
