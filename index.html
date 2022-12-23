@@ -3,134 +3,122 @@
   <head>
     <meta charset="utf-8">
     <title>XMas</title>
-    <style media="screen">
-      #circle1 {
-        position: absolute;
-        left: -530px;
-      }
-      @keyframes rotation0 {
-        from {
-          transform: rotate(330deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-      @keyframes rotation30 {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(30deg);
-        }
-      }
-      @keyframes rotation60 {
-        from {
-          transform: rotate(30deg);
-        }
-        to {
-          transform: rotate(60deg);
-        }
-      }
-      @keyframes rotation90 {
-        from {
-          transform: rotate(60deg);
-        }
-        to {
-          transform: rotate(90deg);
-        }
-      }
-      @keyframes rotation120 {
-        from {
-          transform: rotate(90deg);
-        }
-        to {
-          transform: rotate(120deg);
-        }
-      }
-      @keyframes rotation150 {
-        from {
-          transform: rotate(120deg);
-        }
-        to {
-          transform: rotate(150deg);
-        }
-      }
-      @keyframes rotation180 {
-        from {
-          transform: rotate(150deg);
-        }
-        to {
-          transform: rotate(180deg);
-        }
-      }
-      @keyframes rotation210 {
-        from {
-          transform: rotate(180deg);
-        }
-        to {
-          transform: rotate(210deg);
-        }
-      }
-      @keyframes rotation240 {
-        from {
-          transform: rotate(210deg);
-        }
-        to {
-          transform: rotate(240deg);
-        }
-      }
-      @keyframes rotation270 {
-        from {
-          transform: rotate(240deg);
-        }
-        to {
-          transform: rotate(270deg);
-        }
-      }
-      @keyframes rotation300 {
-        from {
-          transform: rotate(270deg);
-        }
-        to {
-          transform: rotate(300deg);
-        }
-      }
-      @keyframes rotation330 {
-        from {
-          transform: rotate(300deg);
-        }
-        to {
-          transform: rotate(330deg);
-        }
-      }
-      @keyframes rotation360 {
-        from {
-          transform: rotate(330deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="xmas.css">
   </head>
   <body id="body">
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit a</p>
-    <img id="circle1" src="circle.png" alt="Die erste Scheibe" onclick="rotateCircle1()">
-    <ul>
-	<li>Däumelieschen</li>
-	<li>Die Störche</li>
-	<li>Der fliegende Koffer</li>
-	<li>Fliedermütterchen </li>
-	<li>Der Tannenbaum</li>
-</ul>
-<p>Dort auf dem Platze banden mitunter die kecksten Knaben ihre Schlitten an die Bauernwagen und fuhren dann eine tüchtige Strecke mit. Das ging gerade recht lustig. Als das Spiel im vollen Gange war, kam ein großer, weiß angestrichener Schlitten. Eine Person saß in demselben, die in einen weißen, rauen Pelz eingehüllt und mit einer weißen Pelzmütze bedeckt war. Der Schlitten fuhr zweimal um den Platz herum und Kay gelang es, seinen kleinen Schlitten an denselben festzubinden und nun fuhr er mit. Rascher und immer rascher ging es gerade in die nächste Straße hinein. Der Führer des Schlittens wandte den Kopf und nickte ihm so freundlich zu, als ob sie mit einander bekannt wären. So oft Kay seinen kleinen Schlitten abbinden wollte, nickte die Person abermals und dann blieb Kay sitzen; sie fuhren gerade zum Stadttore hinaus. Da wurde das Schneegestöber so heftig, dass der kleine Knabe nicht die Hand vor den Augen mehr erkennen konnte, während er gleichwohl weiter fuhr. Endlich ließ er den Strick fallen, um sich von dem großen Schlitten los zu machen, aber es half nichts, sein kleines Fuhrwerk hing fest und es ging mit Windeseile. Da rief er ganz laut, aber niemand hörte ihn, und der Schnee wirbelte und der Schlitten flog vorwärts. Mitunter gab es einen Stoß, als ob man über Gräben und Hecken führe. Er war ganz entsetzt, wollte sein Vaterunser beten, konnte sich aber nur noch auf das große Einmaleins besinnen.</p>
-<script type="text/javascript">
+    <div id="circle1Container">
+      <img id="circle1" src="circle1.png" alt="Die erste Scheibe" onclick="rotateCircle1()" onload="window.scroll(0,0);">
+      <img id="caret1" src="caret1.png" alt="Der erste Zeiger" onclick="rotateCircle1()">
+    </div>
+    <div id="circle2Container">
+      <img id="circle2" src="circle2.png" alt="Die zweite Scheibe" onclick="rotateCircle2()">
+      <img id="caret2" src="caret2.png" alt="Der zweite Zeiger" onclick="rotateCircle2()" style="display:block">
+    </div>
+    <div id="circle3Container">
+      <img id="caret3" src="caret3.png" alt="Der dritte Zeiger" onclick="rotateCircle3()">
+      <img id="circle3" src="circle3.png" alt="Die dritte Scheibe" onclick="rotateCircle3()">
+    </div>
+    <main id="main">
+      <div id="stage">
+      <div id="slotmachine1" class="slotmachine">
+        <span id="slot1Item1" class="slotitem">DPPA4</span>
+        <span id="slot1Item2" class="slotitem"></span>
+      </div>
+      <span id="dash12" class="dash" style="left:150px;">-</span>
+      <div id="slotmachine2" class="slotmachine" style="left:200px;top:-59px">
+        <span id="slot2Item1" class="slotitem">DOHV2</span>
+        <span id="slot2Item2" class="slotitem"></span>
+      </div>
+      <span id="dash23" class="dash" style="left:350px;top:-59px">-</span>
+      <div id="slotmachine3" class="slotmachine" style="left:400px;top:-118px">
+        <span id="slot3Item1" class="slotitem">87JGE</span>
+        <span id="slot3Item2" class="slotitem"></span>
+      </div>
+    </div>
+      <p>
+        Die 3 Scheiben zeigen mysteriöse Bilder und Zeichen.
+
+        Sie scheinen leicht bewegbar und du hörst einen knirschenden Mechanismus, wenn du an einer drehst.
+        Du beobachtest, dass sich der Code in der Mitte mit jeder Drehung verändert.
+        <br>
+        <br>
+        Die Karte ist der Schlüssel.
+        Von links nach rechts wird sich dir das letze Wort offenbaren.
+      </p>
+      <br>
+      <br>
+      <p>
+        Hast du nun den richtigen Code herausgefunden, musst du ihn nur noch anwenden. Schaue dir die unteren Hinweise erst an, wenn du dir sicher bist, den richtigen Code zu haben.
+      </p>
+      <details>
+        <summary>🖥️</summary>
+        Vielleicht hat dieses Zeichen etwas damit zu tun, wo dieser Code angewendet werden muss.
+      </details>
+      <details>
+        <summary>🎮</summary>
+        Wofür könnte der Code sein was denkst du denn? Für ❓ und Spaß?
+      </details>
+      <details>
+          <summary>⚡</summary>
+        Wofür steht der Blitz? Energie? Vielleicht kann man das übersetzen?
+      </details>
+      <details>
+        <summary>➕</summary>
+        Und was noch?
+      </details>
+      <details>
+        <summary>🔄</summary>
+        Umdrehung? Was könnte das heißen? Auf Englisch vielleicht?
+      </details>
+      <details>
+        <summary>📅</summary>
+        Ein Kalender? Wofür könnte der stehen? Den aktuellen Tag? Oder vielleicht das aktuelle Jahr? Welches Jahr haben wir nochmal?
+      </details>
+    </main>
+      <script type="text/javascript">
   var circle1Rotation = 0;
+  var codes1 = ["DPPA4","MKMA6","M5XY2","6V0HT","OISQM","NHBRL","SGJJY","PNKVK","LRJ80","5417T","QAZY5","9QRR2"]
   function rotateCircle1() {
-    circle1Rotation = (circle1Rotation + 30) % 360
-    document.getElementById('circle1').style = "animation-name: rotation" + circle1Rotation +"; animation-duration: 1.3s; animation-fill-mode: forwards;";
+    var oldCode = codes1[circle1Rotation / 30];
+    circle1Rotation = (circle1Rotation + 30) % 360;
+    var newCode = codes1[circle1Rotation / 30];
+    document.getElementById('circle1').className = "rotate" + circle1Rotation;
+    spin(document.getElementById('slotmachine1'), oldCode, newCode);
   }
-</script>
+  var circle2Rotation = 0;
+  var codes2 = ["DOHV2","HZKRS","JVBCL","OP4PQ","DZJGP","332B5","TNDR1","CEA7N","3IB9M","2SKNI","KB8UJ","5C8ZX"]
+  function rotateCircle2() {
+    var oldCode = codes2[circle2Rotation / 30];
+    circle2Rotation = (circle2Rotation + 30) % 360;
+    var newCode = codes2[circle2Rotation / 30];
+    document.getElementById('circle2').className = "rotate" + circle2Rotation;
+    spin(document.getElementById('slotmachine2'), oldCode, newCode);
+  }
+  var circle3Rotation = 0;
+  var codes3 = ["87JGE","U8SVE","YIBQI","YDOYZ","688XK","PYSOS","LC5HG","ETZA5","NUX7H","7UWGF","18H9F","UWDPC"]
+  function rotateCircle3() {
+    var oldCode = codes3[circle3Rotation / 30];
+    circle3Rotation = (circle3Rotation + 30) % 360;
+    var newCode = codes3[circle3Rotation / 30];
+    document.getElementById('circle3').className = "rotate" + circle3Rotation;
+    spin(document.getElementById('slotmachine3'), oldCode, newCode);
+  }
+
+  function spin(element, oldCode, newCode) {
+    element.classList.remove("spin");
+    element.children[0].innerHTML=oldCode;
+    element.children[1].innerHTML=newCode;
+    element.offsetHeight; /* trigger reflow */
+    element.classList.add("spin");
+  }
+
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      window.scroll(0,0);
+      console.log("scroll to origin")
+    }, 330);
+  })
+
+  </script>
   </body>
 </html>
